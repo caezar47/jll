@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+    <head>  
+        <meta charset="utf-8">	
+<title>Калькулятор | jll.ru</title>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+<link href="./css/style.css" rel="stylesheet">    </head>
+    <body>
+        <nav class="navbar__block  ">
+	<div class="navbar__container container">	
+		<div class="navbar__row">
+			<div class="navbar__cols  is--logotip">
+				<a class="navbar__logotip" href="./">
+					<svg class="icon-svg icon-logotip" role="img">
+	<use xlink:href="./img/svg/sprite.svg#logotip"></use>
+</svg>				</a>
+			</div>
+			<div class="navbar__cols  is--heading">
+				<h1 class="navbar__heading">Office stress test</h1>
+			</div>					   
+		</div>
+	</div>
+</nav> 
+        <main class="form__main">
+            	<form action="#" class="form__block  ">		
+		<div class="form__container container  ">
+			<div class="form__row  ">				
+				<h1 data-grid-heading class="form__heading  ">Office stress test</h1>
+				<ol data-grid-step class="form__step  ">
+					<li class="form__step-item  ">
+						<a href="#calc-step1" class="form__step-link    is--active">Данные об&nbsp;объекте <span>1</span></a> 	
+					</li>
+					<li class="form__step-item  is--deliver  "></li>
+					<li class="form__step-item  ">
+						<a href="#calc-step2" disabled class="form__step-link    ">Данные об&nbsp;арендаторе  <span>2</span></a>	
+					</li>
+				</ol>
+				<div data-grid-pane> 
+					<div class="form__step-pane    active"  id="calc-step1">
+						<div class="form__card  ">
+							<div class="form__card-heading  ">
+								<h2>
+									Укажите данные об объекте
+								</h2>
+							</div>
+							<div class="form__card-row  ">
+									<p class="form__item      ">
+				<label class="form__label  " for="calc[objClass]">Класс объекта *</label>
+				<select class="form__control    " id="calc[objClass]" name="f[Класс объекта]"  data-select  required>
+							<option value="" selected>Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+				
+		</select>
+	</p>
+
+									<p class="form__item      is--error">
+				<label class="form__label  " for="calc[objZone]">Зона объекта *</label>
+				<select class="form__control    " id="calc[objZone]" name="f[Зона объекта]"  data-select  required>
+							<option value="" selected>Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+				
+		</select>
+	</p>
+
+	
+								
+		
+	<p class="form__item    is--error">
+				<label class="form__label  " for="calc[area]">Арендопригодная площадь *</label>
+				<input type="number" class="form__control      " required placeholder=""  id="calc[area]" name="f[Арендопригодная площадь]">
+		<span class="form__control-unit    ">м<sup>2</sup></span>	</p>
+		
+	<p class="form__item    ">
+				<label class="form__label  " for="calc[vacancy]">Текущая вакансия *</label>
+				<input type="number" class="form__control      " required placeholder=""  id="calc[vacancy]" name="f[Текущая вакансия]">
+		<span class="form__control-unit    ">м<sup>2</sup></span>	</p>
+		
+							</div>
+						</div>
+					</div>
+					<div class="form__step-pane  "  id="calc-step2">
+						<div class="form__card  ">
+							<div class="form__card-heading  ">
+								<h2>
+									Укажите данные об арендаторе
+								</h2>
+								<span>Арендатор 1</span>
+							</div>
+							<div class="form__card-row  ">
+									<p class="form__item      ">
+				<label class="form__label  " for="calc[department1]">Отрасль *</label>
+				<select class="form__control    " id="calc[department1]" name="f[Отрасль]"  data-select  required>
+							<option value="" selected>Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+				
+		</select>
+	</p>
+
+									<p class="form__item      ">
+				<label class="form__label  " for="calc[departmentUn1]">Подотрасль *</label>
+				<select class="form__control    " id="calc[departmentUn1]" name="f[Подотрасль]"  data-select  required>
+							<option value="" selected>Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+				
+		</select>
+	</p>
+
+									<p class="form__item      ">
+				<label class="form__label  " for="calc[type1]">Тип компании *</label>
+				<select class="form__control    " id="calc[type1]" name="f[Тип компании]"  data-select  required>
+							<option value="" selected>Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+				
+		</select>
+	</p>
+
+	
+								
+		
+	<p class="form__item    ">
+				<label class="form__label  " for="calc[area]">Занимаемая площадь *</label>
+				<input type="number" class="form__control      " required placeholder=""  id="calc[area]" name="f[Занимаемая площадь]">
+		<span class="form__control-unit    ">м<sup>2</sup></span>	</p>
+									<div>
+									<a href="#" class="form__card-link  "><span><svg class="icon-svg icon-plus" role="img">
+	<use xlink:href="./img/svg/sprite.svg#plus"></use>
+</svg></span> Добавить арендатора</a>
+								</div>	
+							</div>
+						</div>
+						<div class="form__card  ">
+							<div class="form__card-heading  ">
+								<h2>
+									Укажите данные об арендаторе
+								</h2>
+								<span>Арендатор 2</span>
+							</div>
+							<div class="form__card-row  ">
+									<p class="form__item      ">
+				<label class="form__label  " for="calc[department2]">Отрасль *</label>
+				<select class="form__control    " id="calc[department2]" name="f[Отрасль]"  data-select  required>
+							<option value="" selected>Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+				
+		</select>
+	</p>
+
+									<p class="form__item      ">
+				<label class="form__label  " for="calc[departmentUn2]">Подотрасль *</label>
+				<select class="form__control    " id="calc[departmentUn2]" name="f[Подотрасль]"  data-select  required>
+							<option value="" selected>Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+				
+		</select>
+	</p>
+
+									<p class="form__item      ">
+				<label class="form__label  " for="calc[type2]">Тип компании *</label>
+				<select class="form__control    " id="calc[type2]" name="f[Тип компании]"  data-select  required>
+							<option value="" selected>Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+							<option value="" >Сайт рыбатекст поможет дизайнеру</option>
+				
+		</select>
+	</p>
+
+	
+								
+		
+	<p class="form__item    ">
+				<label class="form__label  " for="calc[area]">Занимаемая площадь *</label>
+				<input type="number" class="form__control      " required placeholder=""  id="calc[area]" name="f[Занимаемая площадь]">
+		<span class="form__control-unit    ">м<sup>2</sup></span>	</p>
+									<div>
+									<a href="#" class="form__card-link  "><span><svg class="icon-svg icon-plus" role="img">
+	<use xlink:href="./img/svg/sprite.svg#plus"></use>
+</svg></span> Добавить арендатора</a>
+								</div>	
+							</div>
+						</div>
+						<div class="form__btn-group  ">
+							<button type="reset" class="form__btn-link  ">
+								Очистить все
+							</button>
+							<button type="submit" class="form__btn-item  ">
+								Сделать расчет
+							</button>
+						</div>
+					</div>
+				</div>
+				<div data-grid-result>
+					<div class="form__card    is--chart">
+						<div class="form__card-heading    is--chart">
+							<h2>
+								Динамика уровня вакантности и операционного потока
+							</h2>
+						</div>
+						<div id="chart_div"></div>
+					</div>					
+				</div>
+				<div data-grid-caption class="form__caption  "><b>*Тип компании: Малая - до</b> 1 000 м<sup>2</sup>; <b>Средняя - </b>от 1 000 до 2 500 м<sup>2</sup>; <b>Крупная -</b> от 2 500 м<sup>2</sup></div>
+			</div>
+		</div>
+	</form>
+ 
+        </main>
+        <footer class="footer__block">	
+	<div class="footer__container container">
+		<div class="footer__row">
+			<div class="footer__cols  is--logotip">
+				<a href="./" class="footer__logotip">
+					<svg class="icon-svg icon-logotip" role="img">
+	<use xlink:href="./img/svg/sprite.svg#logotip"></use>
+</svg>				</a>
+			</div>
+			<div class="footer__cols  is--text">
+				тел. <a href="tel:+74957378000">+7 495 737 8000</a><br> © Copyright 2020 Jones Lang LaSalle, IP, Inc.
+			</div>
+		</div>	
+	</div>
+</footer>        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="./js/jquery-3.2.1.min.js" ></script>
+<script src="./js/document-ready.js" ></script>
+<script src="./js/svg4everybody.min.js" ></script>
+<script>
+svg4everybody();
+document.createElement("picture");
+</script> 
+
+ <!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(drawVisualization);
+
+	function drawVisualization() {        
+      	var data = new google.visualization.DataTable();
+		data.addColumn('string', 'Years');
+		data.addColumn('number', 'Total Number of Employees');
+		data.addColumn('number', 'Total Investigations');
+
+        data.addRows([
+          ['2010', 100, 500],
+          ['2011', 300, 700],
+          ['2012', 200, 300],
+          ['2013', 600, 400],
+          ['2014', 400, 500],
+          ['2015', 600, 800],
+          ['2016', 100, 500],
+          ['2017', 300, 700],
+          ['2018', 200, 300],
+          ['2019', 700, 400],
+        ]);
+
+        var options = {          
+			title: 'Number of Employees vs Number of Investigations',
+			legend:'bottom',
+			height: 278,
+			vAxis: {
+				textStyle: {fontSize: 10}
+			},
+			hAxis: {
+				textStyle: {fontSize: 10}
+			},
+			colors: ['#D4D5D6', '#000'],
+			seriesType: 'bars',
+			series: {1: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+</script>    </body>
+</html> 

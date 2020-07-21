@@ -1,0 +1,24 @@
+{% if view == "select" %}
+	<p class="{{prefix}}item  {{mod}}  {{group}}  {% if error == "true" %}is--error{% endif %}">
+		{% if label %}
+		<label class="{{prefix}}label  {{mod}}" for="{{form_id}}[{{id}}]">{{label}}</label>
+		{% endif %}
+		<select class="{{prefix}}control  {{mod}}  {{color}}" id="{{form_id}}[{{id}}]" name="f[{{name}}]"  {{attr}}  {{required}}>
+			{% for value in list %}
+				<option value="{{value.val}}" {{value.status}}>{{value.name}}</option>
+			{% endfor %}	
+		</select>
+	</p>
+{% endif %}
+
+{% if view == "input" %}
+	{% for value in list %}	
+	<p class="{{prefix}}item  {{mod}}  {% if value.error == "true" %}is--error{% endif %}">
+		{% if value.label %}
+		<label class="{{prefix}}label  {{mod}}" for="{{value.form_id}}[{{value.id}}]">{{value.label}}</label>
+		{% endif %}
+		<input type="{{value.type}}" class="{{prefix}}control  {{value.validate}}  {{mod}}  {{color}}" {{value.required}} placeholder="{{value.placeholder}}" {% if value.view == "date" %}onfocus="(this.type='date')"{% endif %} id="{{value.form_id}}[{{value.id}}]" name="f[{{value.name}}]">
+		{% if value.unit %}<span class="{{prefix}}control-unit  {{mod}}  {{color}}">{{value.unit}}</span>{% endif %}
+	</p>
+	{% endfor %}
+{% endif %}

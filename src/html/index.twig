@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+    <head>  
+        {% include "../block/common/head/head.twig" with {title:"Калькулятор"}  %}
+    </head>
+    <body>
+        {% include "../block/common/navbar/navbar.twig" with {
+            navbar_prefix:"navbar__",
+            navbar_mod:"",
+            active:page.index,
+        } %} 
+        <main class="form__main">
+            {% include "../block/common/form/form.twig" with {
+                view:"calc",         
+                prefix:"form__", 
+                ID: "calc",        
+            } %} 
+        </main>
+        {% include "../block/common/footer/footer.twig" with {
+            footer_prefix:"footer__"
+        } %}        
+        {% include "../block/common/script/script.twig"%}
+    </body>
+</html> 

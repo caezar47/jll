@@ -1,0 +1,124 @@
+//===== url =====//
+@url-site 					: 	'';
+@url-path 					: 	'..';
+@url-path-css 				: 	'@{url-path}/css';
+@url-path-fonts 			: 	'@{url-path}/fonts';
+@url-path-img 				: 	'@{url-path}/img';
+@url-path-js 				: 	'@{url-path}/js';
+
+//===== color =====//
+@white 						:	#fff;
+@white-e5 					: 	#E5E5E5;
+@black 						: 	#000;
+@black-21 					: 	#212529;
+@black-62 					: 	#626468;
+@black-7f 					: 	#7F7F7F;
+@black-b1 					: 	#B1B2B4;
+@red 						:	#E30613;
+@red-h 						:	#A3040D;
+
+@primary 					:	@red; 					//+
+@default 					:	@black-62; 				//+
+@warning 					:	fadeout(@white, 100%);
+@success 					:	@red-h; 			//+
+@info 						:	@black-7f;				//+
+@danger 					:	fadeout(@white, 100%);
+
+//===== fonts =====//
+@sourcesans 				: 	sourcesans-400;
+@sourcesans-300				: 	sourcesans-300;
+@sourcesans-600				: 	sourcesans-600;
+@sourcesans-700				: 	sourcesans-700;
+@sourcesans-900				: 	sourcesans-900;
+
+//===== base =====//
+@site_bg 					:	@white; 
+@site_color 				:	@default; 
+@site_link_color 			:	@primary; 
+@site_link_color_hover 		:	@success; 
+@site_rad 					:	6px; 
+
+@site_ff 					:	@sourcesans; 
+
+@site_fs 					:	14px; 
+@site_lh 					:	18px; 
+
+@block_pl 					: 	120px;
+@block_pl 					: 	6.7vw;
+@block_pl_xl 				: 	26.9vw;
+
+@b-ff 						:	@sourcesans;
+@b-ff-2 					:	@sourcesans;
+
+@b-color-a 					:	@primary; 
+@b-color-a-hover 			:	@success; 
+ 		
+@b-fs 						: 	@site_fs;
+@b-lh 						: 	@site_lh;
+@trs-site 					: 	all 0.35s ease; 
+@trs-option 				: 	0.35s ease; 
+@b_rad 						: 	5px; 
+//
+@margin_map:
+	huge 	4vw		30px,
+	normal 	3.4vw	30px,
+	large 	3.4vw	30px,
+	medium 	2.5vw	25px,
+	small 	1.8vw	20px,
+	tiny 	15px	15px,
+	narrow 	10px	10px,
+	default 30px	10px;
+@fw_map:
+	thin 	100,
+	elight 	200,
+	light 	300,
+	normal 	400,
+	medium  500,
+	sbold  	600,
+	bold  	700,
+	ebold 	800,
+	black  	900;
+//===== grid =====//
+@xs 						:	0px;
+@sm 						:	575px;
+@md 						:	768px;
+@lg 						:	992px;
+@xl 						:	1200px;
+@xxl 						:	1400px;
+@xxxl 						:	1700px;
+
+@container_size  			:	1320px;
+@container_size_text  		:	1045px;
+@container_gap  			:	15px;
+@container_gap_xl  			:	6.7vw;
+
+//===== navbar =====//
+@navbar_bg 					:	@white;
+@navbar_logo_color 			: 	@black;
+@navbar_logo_widht 			: 	97px;
+@navbar_logo_height 		: 	43px;
+//===== end's navbar =====//
+
+//===== footer =====//
+@footer_bg 					:	@black;
+@footer_color 				:	@black-b1; 
+@footer_logo_color 			: 	@white;
+@footer_logo_widht 			: 	86px;
+@footer_logo_height 		: 	38px;
+//===== end's footer =====//
+
+//===== form  =====//
+@input_label				: 	fadeout(@info, 40%);
+@input_height				:	42px;
+@input_bg					:	@white;
+
+@input_border_width			:	1px;
+@input_radius				:	0px;
+@input_border_color			:	@info;
+
+@input_drop_border_color	:	fadeout(@black, 88%);
+@input_color				:	fadeout(@info, 10%);
+
+@input_focus_border_color	:	@info;
+
+@input_focus_color		:	fadeout(@info, 0%);

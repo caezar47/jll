@@ -1,0 +1,282 @@
+{% if view=="calc" %}
+	<form action="#" class="{{prefix}}block  {{mod}}">		
+		<div class="{{prefix}}container container  {{mod}}">
+			<div class="{{prefix}}row  {{mod}}">				
+				<h1 data-grid-heading class="{{prefix}}heading  {{mod}}">Office stress test</h1>
+				<ol data-grid-step class="{{prefix}}step  {{mod}}">
+					<li class="{{prefix}}step-item  {{mod}}">
+						<a href="#{{ID}}-step1" class="{{prefix}}step-link  {{mod}}  is--active">Данные об&nbsp;объекте <span>1</span></a> 	
+					</li>
+					<li class="{{prefix}}step-item  is--deliver  {{mod}}"></li>
+					<li class="{{prefix}}step-item  {{mod}}">
+						<a href="#{{ID}}-step2" disabled class="{{prefix}}step-link  {{mod}}  {{active_two}}">Данные об&nbsp;арендаторе  <span>2</span></a>	
+					</li>
+				</ol>
+				<div data-grid-pane> 
+					<div class="{{prefix}}step-pane  {{mod}}  active"  id="{{ID}}-step1">
+						<div class="{{prefix}}card  {{mod}}">
+							<div class="{{prefix}}card-heading  {{mod}}">
+								<h2>
+									Укажите данные об объекте
+								</h2>
+							</div>
+							<div class="{{prefix}}card-row  {{mod}}">
+								{% include "elem-tpl.twig" with {
+									view: "select", 
+									prefix:prefix, 
+									mod:mod, 
+									form_id:ID,
+									id:"objClass", 
+									name:"Класс объекта", 
+									label:"Класс объекта *", 
+									color:color, 
+									required: "required",
+									attr:"data-select", 
+									list: [
+										{"name": "Сайт рыбатекст поможет дизайнеру", "status":"selected"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"}
+									]
+								} %}
+								{% include "elem-tpl.twig" with {
+									view: "select", 
+									prefix:prefix, 
+									mod:mod, 
+									form_id:ID,
+									id:"objZone", 
+									error: "true",
+									name:"Зона объекта", 
+									label:"Зона объекта *", 
+									color:color, 
+									required: "required",
+									attr:"data-select", 
+									list: [
+										{"name": "Сайт рыбатекст поможет дизайнеру", "status":"selected"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"}
+									]
+								} %}	
+								{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [
+									{
+										"type":"number", 
+										"id":"area", 
+										"form_id":ID,
+										"error": "true",
+										"required": "required",
+										"name":"Арендопригодная площадь", 
+										"label":"Арендопригодная площадь *",
+										"unit":"м<sup>2</sup>"
+									},
+									{
+										"type":"number", 
+										"id":"vacancy", 
+										"form_id":ID,
+										"required": "required",
+										"name":"Текущая вакансия", 
+										"label":"Текущая вакансия *",
+										"unit":"м<sup>2</sup>"
+									},
+								]} %}	
+							</div>
+						</div>
+					</div>
+					<div class="{{prefix}}step-pane  {{mod}}"  id="{{ID}}-step2">
+						<div class="{{prefix}}card  {{mod}}">
+							<div class="{{prefix}}card-heading  {{mod}}">
+								<h2>
+									Укажите данные об арендаторе
+								</h2>
+								<span>Арендатор 1</span>
+							</div>
+							<div class="{{prefix}}card-row  {{mod}}">
+								{% include "elem-tpl.twig" with {
+									view: "select", 
+									prefix:prefix, 
+									mod:mod, 
+									form_id:ID,
+									id:"department1", 
+									name:"Отрасль", 
+									label:"Отрасль *", 
+									color:color, 
+									required: "required",
+									attr:"data-select", 
+									list: [
+										{"name": "Сайт рыбатекст поможет дизайнеру", "status":"selected"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"}
+									]
+								} %}
+								{% include "elem-tpl.twig" with {
+									view: "select", 
+									prefix:prefix, 
+									mod:mod, 
+									form_id:ID,
+									id:"departmentUn1", 
+									name:"Подотрасль", 
+									label:"Подотрасль *", 
+									color:color, 
+									required: "required",
+									attr:"data-select", 
+									list: [
+										{"name": "Сайт рыбатекст поможет дизайнеру", "status":"selected"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"}
+									]
+								} %}
+								{% include "elem-tpl.twig" with {
+									view: "select", 
+									prefix:prefix, 
+									mod:mod, 
+									form_id:ID,
+									id:"type1", 
+									name:"Тип компании", 
+									label:"Тип компании *", 
+									color:color, 
+									required: "required",
+									attr:"data-select", 
+									list: [
+										{"name": "Сайт рыбатекст поможет дизайнеру", "status":"selected"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"}
+									]
+								} %}	
+								{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [
+									{
+										"type":"number", 
+										"id":"area", 
+										"form_id":ID,
+										"required": "required",
+										"name":"Занимаемая площадь", 
+										"label":"Занимаемая площадь *",
+										"unit":"м<sup>2</sup>"
+									}
+								]} %}
+								<div>
+									<a href="#" class="{{prefix}}card-link  {{mod}}"><span>{% include "../svg-sprite/svg.twig" with {icon:'plus'} %}</span> Добавить арендатора</a>
+								</div>	
+							</div>
+						</div>
+						<div class="{{prefix}}card  {{mod}}">
+							<div class="{{prefix}}card-heading  {{mod}}">
+								<h2>
+									Укажите данные об арендаторе
+								</h2>
+								<span>Арендатор 2</span>
+							</div>
+							<div class="{{prefix}}card-row  {{mod}}">
+								{% include "elem-tpl.twig" with {
+									view: "select", 
+									prefix:prefix, 
+									mod:mod, 
+									form_id:ID,
+									id:"department2", 
+									name:"Отрасль", 
+									label:"Отрасль *", 
+									color:color, 
+									required: "required",
+									attr:"data-select", 
+									list: [
+										{"name": "Сайт рыбатекст поможет дизайнеру", "status":"selected"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"}
+									]
+								} %}
+								{% include "elem-tpl.twig" with {
+									view: "select", 
+									prefix:prefix, 
+									mod:mod, 
+									form_id:ID,
+									id:"departmentUn2", 
+									name:"Подотрасль", 
+									label:"Подотрасль *", 
+									color:color, 
+									required: "required",
+									attr:"data-select", 
+									list: [
+										{"name": "Сайт рыбатекст поможет дизайнеру", "status":"selected"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"}
+									]
+								} %}
+								{% include "elem-tpl.twig" with {
+									view: "select", 
+									prefix:prefix, 
+									mod:mod, 
+									form_id:ID,
+									id:"type2", 
+									name:"Тип компании", 
+									label:"Тип компании *", 
+									color:color, 
+									required: "required",
+									attr:"data-select", 
+									list: [
+										{"name": "Сайт рыбатекст поможет дизайнеру", "status":"selected"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"},
+										{"name": "Сайт рыбатекст поможет дизайнеру"}
+									]
+								} %}	
+								{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [
+									{
+										"type":"number", 
+										"id":"area", 
+										"form_id":ID,
+										"required": "required",
+										"name":"Занимаемая площадь", 
+										"label":"Занимаемая площадь *",
+										"unit":"м<sup>2</sup>"
+									}
+								]} %}
+								<div>
+									<a href="#" class="{{prefix}}card-link  {{mod}}"><span>{% include "../svg-sprite/svg.twig" with {icon:'plus'} %}</span> Добавить арендатора</a>
+								</div>	
+							</div>
+						</div>
+						<div class="{{prefix}}btn-group  {{mod}}">
+							<button type="reset" class="{{prefix}}btn-link  {{mod}}">
+								Очистить все
+							</button>
+							<button type="submit" class="{{prefix}}btn-item  {{mod}}">
+								Сделать расчет
+							</button>
+						</div>
+					</div>
+				</div>
+				<div data-grid-result>
+					<div class="{{prefix}}card  {{mod}}  is--chart">
+						<div class="{{prefix}}card-heading  {{mod}}  is--chart">
+							<h2>
+								Динамика уровня вакантности и операционного потока
+							</h2>
+						</div>
+						<div id="chart_div"></div>
+					</div>					
+				</div>
+				<div data-grid-caption class="{{prefix}}caption  {{mod}}"><b>*Тип компании: Малая - до</b> 1 000 м<sup>2</sup>; <b>Средняя - </b>от 1 000 до 2 500 м<sup>2</sup>; <b>Крупная -</b> от 2 500 м<sup>2</sup></div>
+			</div>
+		</div>
+	</form>
+{% endif %}

@@ -1,0 +1,40 @@
+.navbar__{ 
+	&block{ 
+		background-color: @navbar_bg;
+		padding: 17px 0 20px;
+		.media-breakpoint-up(@md; {			
+			padding: 20px 0 24px;
+		});
+	}
+	&logotip{
+		display: block;			
+		width: 100%;
+		max-width: @navbar_logo_widht;
+		height: @navbar_logo_height;	
+		&,&:hover{
+			color: @navbar_logo_color;
+		}
+			
+	}
+	&row{
+		display: flex;
+	}
+	&cols{
+		&.is--logotip{
+			padding-left: 10px;
+			.media-breakpoint-up(@md; {
+				padding-left: 0;
+			});
+		}
+		&.is--heading{
+			display: none;
+			padding-left: 65px;
+			.media-breakpoint-up(@md; {
+				display: block;
+			});
+		}
+	}
+	&heading{
+		margin-bottom: 0;
+	}
+}
