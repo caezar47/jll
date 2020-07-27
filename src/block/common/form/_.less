@@ -201,53 +201,82 @@
 			});
 		}
 		&-link{
-			display: inline-flex;
-			align-items: center;
-			font-weight: 600;
-    		color: @primary;
-		    margin-top: 12px;
-			span{
-				transition: @trs-site;
-				svg{
-					display: block;
-				}
+			&-group{
+				display: flex;
+				flex-direction: column;
+				.media-breakpoint-up(@md; {
+					grid-column: span 2;
+					flex-direction: row;
+					justify-content: space-between;
+				});
 			}
-    		&:hover{
-				color: fadeout(@primary, 40%);
-    		}
-			.media-breakpoint-down(@md; {
-				span{					
-					width: 46px;
-					height: 46px;
-					padding: 12px;
-					background-color: #F3F2F2;
-					border:1px solid #F3F2F2;
-					color: @info;
-					border-radius: 50%;
-					margin-right: 10px;
-				}
-	    		&:hover{
-					span{
-						background-color: #CCCCCC;
-						border-color: #555555;
-						color: @white;
-					}
-	    		}
-			});
-			.media-breakpoint-up(@md; {
-			    margin-top: 2px;
-	    		margin-left: 4px;
+			&{
+				display: inline-flex;
+				align-items: center;
+				font-weight: 600;
+	    		color: @primary;
+				margin-top: 12px;
 				span{
-					margin-right: 5px;		
-					width: 12px;
-					height: 12px;
+					transition: @trs-site;
+					svg{
+						display: block;
+					}
+				}
+				&.is--del{
+					color: @info;
+		    		&:hover{
+						color: fadeout(@info, 40%);
+		    		}
+
 				}
 	    		&:hover{
-					span{
-						color: fadeout(@primary, 40%);
-					}
+					color: fadeout(@primary, 40%);
 	    		}
-			});
+				.media-breakpoint-down(@md; {
+					span{					
+						width: 46px;
+						height: 46px;
+						padding: 12px;
+						background-color: #F3F2F2;
+						border:1px solid #F3F2F2;
+						color: @info;
+						border-radius: 50%;
+						margin-right: 10px;
+					}
+		    		&:hover{
+						span{
+							background-color: #CCCCCC;
+							border-color: #555555;
+							color: @white;
+						}
+		    		}
+				});
+				.media-breakpoint-up(@md; {
+				    margin-top: 2px;
+		    		margin-left: 4px;
+					span{
+						margin-right: 5px;		
+						width: 12px;
+						height: 12px;
+					}
+					&.is--del{
+						span{
+							color: @info;
+						}
+						&:hover{
+							span{
+								color: fadeout(@info, 40%);
+							}	
+						}
+					}
+		    		&:hover{
+						span{
+							color: fadeout(@primary, 40%);
+						}
+		    		}
+				});
+
+			}
 		}
 	}
 	&label{
