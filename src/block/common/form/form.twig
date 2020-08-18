@@ -2,7 +2,7 @@
 	<form action="#" class="{{prefix}}block  {{mod}}">		
 		<div class="{{prefix}}container container  {{mod}}">
 			<div class="{{prefix}}row  {{mod}}">				
-				<h1 data-grid-heading class="{{prefix}}heading  {{mod}}">Office stress test</h1>
+				<h1 data-grid-heading>Office stress test</h1>
 				<ol data-grid-step class="{{prefix}}step  {{mod}}">
 					<li class="{{prefix}}step-item  {{mod}}">
 						<a href="#{{ID}}-step1" class="{{prefix}}step-link  {{mod}}  is--active">Данные об&nbsp;объекте <span>1</span></a> 	
@@ -12,13 +12,12 @@
 						<a href="#{{ID}}-step2" disabled class="{{prefix}}step-link  {{mod}}  {{active_two}}">Данные об&nbsp;арендаторе  <span>2</span></a>	
 					</li>
 				</ol>
-				<div data-grid-pane> 
+				<div data-grid-pane>
 					<div class="{{prefix}}step-pane  {{mod}}  active"  id="{{ID}}-step1">
+						<h2 class="{{prefix}}heading  {{mod}}">Укажите данные об объекте</h2> 
 						<div class="{{prefix}}card  {{mod}}">
-							<div class="{{prefix}}card-heading  {{mod}}">
-								<h2>
-									Укажите данные об объекте
-								</h2>
+							<div class="{{prefix}}card-heading  {{mod}}  hidden--xs">
+								<h3 class="fw--600  ">Объект</h3>
 							</div>
 							<div class="{{prefix}}card-row  {{mod}}">
 								{% include "elem-tpl.twig" with {
@@ -87,12 +86,10 @@
 						</div>
 					</div>
 					<div class="{{prefix}}step-pane  {{mod}}"  id="{{ID}}-step2">
+						<h2 class="{{prefix}}heading  {{mod}}">Укажите данные об арендаторе</h2> 
 						<div class="{{prefix}}card  {{mod}}">
 							<div class="{{prefix}}card-heading  {{mod}}">
-								<h2>
-									Укажите данные об арендаторе
-								</h2>
-								<span>Арендатор 1</span>
+								<h3 class="fw--600">Арендатор 1</h3>
 							</div>
 							<div class="{{prefix}}card-row  {{mod}}">
 								{% include "elem-tpl.twig" with {
@@ -154,8 +151,22 @@
 										{"name": "Сайт рыбатекст поможет дизайнеру"},
 										{"name": "Сайт рыбатекст поможет дизайнеру"}
 									]
+								} %}
+								{% include "elem-tpl.twig" with {
+									view:"checkbox", 
+									prefix:prefix, 
+									mod:"", 
+									group:"is--checkbox", 
+									color:"", 
+									list: [
+										{"id":"agreement", 
+										"form_id":ID, 
+										"status":"", 
+										"name":"С государственным участием",
+										"label":"С государственным участием"}
+									]
 								} %}	
-								{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [
+								{# {% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [
 									{
 										"type":"number", 
 										"id":"area", 
@@ -165,19 +176,16 @@
 										"label":"Занимаемая площадь *",
 										"unit":"м<sup>2</sup>"
 									}
-								]} %}
+								]} %} #}
 								<div class="{{prefix}}card-link-group  {{mod}}">
 									<a href="#" class="{{prefix}}card-link  {{mod}}"><span>{% include "../svg-sprite/svg.twig" with {icon:'plus'} %}</span> Добавить арендатора</a>
-									<a href="#" class="{{prefix}}card-link  {{mod}}  is--del"><span>{% include "../svg-sprite/svg.twig" with {icon:'minus'} %}</span> Удалить арендатора</a>
+									<a href="#" class="{{prefix}}card-link-del  {{mod}}  is--del"><span>{% include "../svg-sprite/svg.twig" with {icon:'delete'} %}</span> <b>Удалить арендатора</b></a>
 								</div>	
 							</div>
 						</div>
 						<div class="{{prefix}}card  {{mod}}">
 							<div class="{{prefix}}card-heading  {{mod}}">
-								<h2>
-									Укажите данные об арендаторе
-								</h2>
-								<span>Арендатор 2</span>
+								<h3 class="fw--600">Арендатор 2</h3>
 							</div>
 							<div class="{{prefix}}card-row  {{mod}}">
 								{% include "elem-tpl.twig" with {
@@ -240,7 +248,7 @@
 										{"name": "Сайт рыбатекст поможет дизайнеру"}
 									]
 								} %}	
-								{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [
+								{# {% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [
 									{
 										"type":"number", 
 										"id":"area", 
@@ -250,9 +258,24 @@
 										"label":"Занимаемая площадь *",
 										"unit":"м<sup>2</sup>"
 									}
-								]} %}
-								<div>
-									<a href="#" class="{{prefix}}card-link  {{mod}}"><span>{% include "../svg-sprite/svg.twig" with {icon:'plus'} %}</span> Добавить арендатора</a>
+								]} %} #}
+								
+								{% include "elem-tpl.twig" with {
+									view:"checkbox", 
+									prefix:prefix, 
+									mod:"", 
+									group:"is--checkbox", 
+									color:"", 
+									list: [
+										{"id":"agreement", 
+										"form_id":ID, 
+										"status":"", 
+										"name":"С государственным участием",
+										"label":"С государственным участием"}
+									]
+								} %}
+								<div class="{{prefix}}card-link-group  {{mod}}">
+									<a href="#" class="{{prefix}}card-link  {{mod}}"><span>{% include "../svg-sprite/svg.twig" with {icon:'plus'} %}</span> Добавить арендатора</a><a href="#" class="{{prefix}}card-link-del  {{mod}}  is--del"><span>{% include "../svg-sprite/svg.twig" with {icon:'delete'} %}</span> <b>Удалить арендатора</b></a>
 								</div>	
 							</div>
 						</div>
@@ -270,9 +293,9 @@
 					<div class="{{prefix}}sticky">
 						<div class="{{prefix}}card  {{mod}}  is--chart  is--active">
 							<div class="{{prefix}}card-heading  {{mod}}  is--chart">
-								<h2>
+								<h3>
 									Динамика уровня вакантности и операционного потока
-								</h2>
+								</h3>
 							</div>
 							<div id="chart_div"></div>
 						</div>					

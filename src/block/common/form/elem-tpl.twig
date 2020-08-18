@@ -22,3 +22,15 @@
 	</p>
 	{% endfor %}
 {% endif %}
+
+{% if view == "checkbox" %}
+	<p class="{{prefix}}item  {{mod}}  {{group}}  {% if error == "true" %}is--error{% endif %}">
+		{% for value in list %}
+		<label class="{{prefix}}checkbox  {{mod}}  {{color}}  {{value.group}}">
+			<input class="{{prefix}}checkbox-input  {{mod}}  {{color}}" type="checkbox" id="{{value.form_id}}[{{value.id}}]" name="f[{{value.name}}]" {{value.status}}>
+			<span class="{{prefix}}checkbox-icon  {{mod}}  {{color}}"></span>
+			{{value.label}}
+		</label>
+		{% endfor %}
+	</p>
+{% endif %}

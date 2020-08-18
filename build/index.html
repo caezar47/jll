@@ -30,7 +30,7 @@
             	<form action="#" class="form__block  ">		
 		<div class="form__container container  ">
 			<div class="form__row  ">				
-				<h1 data-grid-heading class="form__heading  ">Office stress test</h1>
+				<h1 data-grid-heading>Office stress test</h1>
 				<ol data-grid-step class="form__step  ">
 					<li class="form__step-item  ">
 						<a href="#calc-step1" class="form__step-link    is--active">Данные об&nbsp;объекте <span>1</span></a> 	
@@ -40,13 +40,12 @@
 						<a href="#calc-step2" disabled class="form__step-link    ">Данные об&nbsp;арендаторе  <span>2</span></a>	
 					</li>
 				</ol>
-				<div data-grid-pane> 
+				<div data-grid-pane>
 					<div class="form__step-pane    active"  id="calc-step1">
+						<h2 class="form__heading  ">Укажите данные об объекте</h2> 
 						<div class="form__card  ">
-							<div class="form__card-heading  ">
-								<h2>
-									Укажите данные об объекте
-								</h2>
+							<div class="form__card-heading    hidden--xs">
+								<h3 class="fw--600  ">Объект</h3>
 							</div>
 							<div class="form__card-row  ">
 									<p class="form__item      ">
@@ -62,6 +61,7 @@
 		</select>
 	</p>
 
+
 									<p class="form__item      is--error">
 				<label class="form__label  " for="calc[objZone]">Зона объекта *</label>
 				<select class="form__control    " id="calc[objZone]" name="f[Зона объекта]"  data-select  required>
@@ -75,6 +75,7 @@
 		</select>
 	</p>
 
+
 	
 								
 		
@@ -87,17 +88,16 @@
 				<label class="form__label  " for="calc[vacancy]">Текущая вакансия *</label>
 				<input type="number" class="form__control      " required placeholder=""  id="calc[vacancy]" name="f[Текущая вакансия]">
 		<span class="form__control-unit    ">м<sup>2</sup></span>	</p>
-		
+	
+	
 							</div>
 						</div>
 					</div>
 					<div class="form__step-pane  "  id="calc-step2">
+						<h2 class="form__heading  ">Укажите данные об арендаторе</h2> 
 						<div class="form__card  ">
 							<div class="form__card-heading  ">
-								<h2>
-									Укажите данные об арендаторе
-								</h2>
-								<span>Арендатор 1</span>
+								<h3 class="fw--600">Арендатор 1</h3>
 							</div>
 							<div class="form__card-row  ">
 									<p class="form__item      ">
@@ -113,6 +113,7 @@
 		</select>
 	</p>
 
+
 									<p class="form__item      ">
 				<label class="form__label  " for="calc[departmentUn1]">Подотрасль *</label>
 				<select class="form__control    " id="calc[departmentUn1]" name="f[Подотрасль]"  data-select  required>
@@ -125,6 +126,7 @@
 				
 		</select>
 	</p>
+
 
 									<p class="form__item      ">
 				<label class="form__label  " for="calc[type1]">Тип компании *</label>
@@ -139,29 +141,31 @@
 		</select>
 	</p>
 
+
+								
+
+	<p class="form__item    is--checkbox  ">
+				<label class="form__checkbox      ">
+			<input class="form__checkbox-input    " type="checkbox" id="calc[agreement]" name="f[С государственным участием]" >
+			<span class="form__checkbox-icon    "></span>
+			С государственным участием
+		</label>
+			</p>
 	
 								
-		
-	<p class="form__item    ">
-				<label class="form__label  " for="calc[area]">Занимаемая площадь *</label>
-				<input type="number" class="form__control      " required placeholder=""  id="calc[area]" name="f[Занимаемая площадь]">
-		<span class="form__control-unit    ">м<sup>2</sup></span>	</p>
-									<div class="form__card-link-group  ">
+								<div class="form__card-link-group  ">
 									<a href="#" class="form__card-link  "><span><svg class="icon-svg icon-plus" role="img">
 	<use xlink:href="./img/svg/sprite.svg#plus"></use>
 </svg></span> Добавить арендатора</a>
-									<a href="#" class="form__card-link    is--del"><span><svg class="icon-svg icon-minus" role="img">
-	<use xlink:href="./img/svg/sprite.svg#minus"></use>
-</svg></span> Удалить арендатора</a>
+									<a href="#" class="form__card-link-del    is--del"><span><svg class="icon-svg icon-delete" role="img">
+	<use xlink:href="./img/svg/sprite.svg#delete"></use>
+</svg></span> <b>Удалить арендатора</b></a>
 								</div>	
 							</div>
 						</div>
 						<div class="form__card  ">
 							<div class="form__card-heading  ">
-								<h2>
-									Укажите данные об арендаторе
-								</h2>
-								<span>Арендатор 2</span>
+								<h3 class="fw--600">Арендатор 2</h3>
 							</div>
 							<div class="form__card-row  ">
 									<p class="form__item      ">
@@ -177,6 +181,7 @@
 		</select>
 	</p>
 
+
 									<p class="form__item      ">
 				<label class="form__label  " for="calc[departmentUn2]">Подотрасль *</label>
 				<select class="form__control    " id="calc[departmentUn2]" name="f[Подотрасль]"  data-select  required>
@@ -189,6 +194,7 @@
 				
 		</select>
 	</p>
+
 
 									<p class="form__item      ">
 				<label class="form__label  " for="calc[type2]">Тип компании *</label>
@@ -203,17 +209,25 @@
 		</select>
 	</p>
 
+
 	
 								
-		
-	<p class="form__item    ">
-				<label class="form__label  " for="calc[area]">Занимаемая площадь *</label>
-				<input type="number" class="form__control      " required placeholder=""  id="calc[area]" name="f[Занимаемая площадь]">
-		<span class="form__control-unit    ">м<sup>2</sup></span>	</p>
-									<div>
+								
+								
+
+	<p class="form__item    is--checkbox  ">
+				<label class="form__checkbox      ">
+			<input class="form__checkbox-input    " type="checkbox" id="calc[agreement]" name="f[С государственным участием]" >
+			<span class="form__checkbox-icon    "></span>
+			С государственным участием
+		</label>
+			</p>
+								<div class="form__card-link-group  ">
 									<a href="#" class="form__card-link  "><span><svg class="icon-svg icon-plus" role="img">
 	<use xlink:href="./img/svg/sprite.svg#plus"></use>
-</svg></span> Добавить арендатора</a>
+</svg></span> Добавить арендатора</a><a href="#" class="form__card-link-del    is--del"><span><svg class="icon-svg icon-delete" role="img">
+	<use xlink:href="./img/svg/sprite.svg#delete"></use>
+</svg></span> <b>Удалить арендатора</b></a>
 								</div>	
 							</div>
 						</div>
@@ -231,9 +245,9 @@
 					<div class="form__sticky">
 						<div class="form__card    is--chart  is--active">
 							<div class="form__card-heading    is--chart">
-								<h2>
+								<h3>
 									Динамика уровня вакантности и операционного потока
-								</h2>
+								</h3>
 							</div>
 							<div id="chart_div"></div>
 						</div>					
