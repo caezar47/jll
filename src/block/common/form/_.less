@@ -408,8 +408,9 @@
 		position: relative;
 		&.is--checkbox{
 			display: flex;
-			//justify-content: flex-end;
-			//align-content: flex-end;
+			.media-breakpoint-up(@md; {
+				padding-top: 18px;
+			});
 		}
 		&.is--error{
 			.form__control{
