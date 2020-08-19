@@ -11,47 +11,73 @@ svg4everybody();
 document.createElement("picture");
 </script> 
 
- <!--Load the AJAX API-->
+<!--Load the AJAX API-->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-	google.charts.load('current', {'packages':['corechart']});
+	google.charts.load('current', {packages: ['corechart', 'bar']});
 	google.charts.setOnLoadCallback(drawVisualization);
 
 	function drawVisualization() {        
       	var data = new google.visualization.DataTable();
 		data.addColumn('string', 'Years');
 		data.addColumn('number', 'Total Number of Employees');
+     	data.addColumn({type: 'string', role: 'annotation'});
 		data.addColumn('number', 'Total Investigations');
+      	data.addColumn({type: 'string', role: 'annotation'});
 
         data.addRows([
-          ['2010', 100, 500],
-          ['2011', 300, 700],
-          ['2012', 200, 300],
-          ['2013', 600, 400],
-          ['2014', 400, 500],
-          ['2015', 600, 800],
-          ['2016', 100, 500],
-          ['2017', 300, 700],
-          ['2018', 200, 300],
-          ['2019', 700, 400],
+          ['2010', 100, '100', 500, '500'],
+          ['2011', 300, '300', 700, '700'],
+          ['2012', 200, '200', 300, '300'],
+          ['2013', 600, '600', 400, '400'],
+          ['2014', 400, '400', 500, '500'],
+          ['2015', 600, '600', 800, '800'],
+          ['2016', 100, '100', 500, '500'],
+          ['2017', 300, '300', 700, '700'],
+          ['2018', 200, '200', 300, '300'],
+          ['2019', 700, '700', 400, '400'],
         ]);
 
         var options = {          
 			title: 'Number of Employees vs Number of Investigations',
 			legend:'bottom',
 			height: 278,
+			chartArea: {'width': '100%', 'height': '80%'},
 			vAxis: {
 				textStyle: {fontSize: 10}
 			},
 			hAxis: {
 				textStyle: {fontSize: 10}
-			},
+			},			
+	        annotations: {
+				textStyle: {
+					fontSize: 10,
+				}
+	        },
+			colors: ['#D4D5D6', '#000'],
+			seriesType: 'bars',
+			series: {1: {type: 'line'}}
+        };
+
+        var options_full = {          
+			title: 'Number of Employees vs Number of Investigations',
+			legend:'bottom',
+			width: 1000,
+			height: 1000,
+			chartArea: {'width': '90%', 'height': '70%'},
 			colors: ['#D4D5D6', '#000'],
 			seriesType: 'bars',
 			series: {1: {type: 'line'}}
         };
 
         var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        var chart_full = new google.visualization.ComboChart(document.getElementById('chart_div_full'));
+
+        google.visualization.events.addListener(chart_full, 'ready', function () {
+      		document.getElementById('chart_download').innerHTML = '<a download="chart.png" class="form__btn-item" href="' + chart_full.getImageURI() + '">Сохранить график</a>';
+		});
+        chart_full.draw(data, options_full);
         chart.draw(data, options);
     }
 </script>
+<div id="chart_div_full" style="position: absolute; appearance: none; width: 1px; 	height: 1px; margin: -1px; clip: rect(0 0 0 0);"></div>
